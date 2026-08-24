@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABNORMAL - it wasn't supposed to behave like this.">
+    <title>ABNORMAL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body data-page="landing">
+    <div id="app">
+        <!-- Landing Page -->
+        <div id="landing-page" class="page active">
+            <div class="landing-container">
+                <h1 class="abnormal-title">ABNORMAL</h1>
+                <p class="landing-subtitle">sesuatu di sini sedang memperhatikan cara kamu menggunakannya.</p>
+                <button id="enter-btn" class="btn-enter">MASUK</button>
+            </div>
+        </div>
+
+        <!-- Main Space Page -->
+        <div id="space-page" class="page">
+            <div class="space-container">
+                <div class="the-thing-wrapper">
+                    <div id="the-thing" class="the-thing">
+                        <span class="thing-name">THE THING</span>
+                        <div class="thing-object"></div>
+                    </div>
+                </div>
+                
+                <div class="space-ui">
+                    <div class="user-identity">
+                        <span id="user-id">USER-0000</span>
+                    </div>
+                    
+                    <nav class="space-nav">
+                        <button class="nav-btn" data-page="space">OBSERVE</button>
+                        <button class="nav-btn" data-page="memory">MEMORY</button>
+                        <button class="nav-btn" data-page="feedback">FEEDBACK</button>
+                        <button id="do-not-open-btn" class="nav-btn forbidden">DO NOT OPEN</button>
+                    </nav>
+                </div>
+
+                <div class="observer-messages">
+                    <div id="message-container" class="message"></div>
+                </div>
+
+                <button id="mute-btn" class="mute-btn" title="Toggle Audio">🔊</button>
+            </div>
+        </div>
+
+        <!-- Memory Page -->
+        <div id="memory-page" class="page">
+            <div class="memory-container">
+                <h2>MEMORY</h2>
+                <div id="memory-content" class="memory-list">
+                    <!-- Dynamically populated -->
+                </div>
+                <button class="back-btn" data-page="space">BACK</button>
+            </div>
+        </div>
+
+        <!-- Feedback Page -->
+        <div id="feedback-page" class="page">
+            <div class="feedback-container">
+                <h2>FEEDBACK</h2>
+                <p class="feedback-info">Your behavior is being catalogued. This is not optional.</p>
+                <div id="feedback-content" class="feedback-list">
+                    <!-- Dynamically populated -->
+                </div>
+                <button class="back-btn" data-page="space">BACK</button>
+            </div>
+        </div>
+
+        <!-- Forbidden Page (DO NOT OPEN) -->
+        <div id="forbidden-page" class="page">
+            <div class="forbidden-container">
+                <p class="forbidden-text">kenapa kamu membukanya?</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Context -->
+    <audio id="ambience-audio" preload="none">
+        <source src="audio/ambience.wav" type="audio/wav">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/behavior-tracker.js"></script>
+    <script src="js/thing-behavior.js"></script>
+    <script src="js/message-system.js"></script>
+    <script src="js/easter-eggs.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
